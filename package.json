@@ -1,5 +1,5 @@
 {
-  "name": "okd-training",
+  "name": "openshift-training",
   "license": "MIT",
   "private": true,
   "scripts": {

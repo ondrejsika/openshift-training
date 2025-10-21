@@ -282,6 +282,12 @@ HTTPS Route with Let's Encrypt certificate
 oc apply -f examples/route_https_le_cert.yml
 ```
 
+## OpenShift Cluster Setup
+
+### Pull Secret
+
+Get the pull secret here: <https://console.redhat.com/openshift/install/pull-secret>
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**

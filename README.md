@@ -89,7 +89,7 @@ Using [slu](https://github.com/sikalabs/slu) (Linux, Windows, Mac)
 slu install-bin oc
 ```
 
-## Demo OKD Cluster
+## Demo OpenShift Cluster
 
 - URL: https://console-openshift-console.apps.training.germanywestcentral.aroapp.io
 - Admin User: `kubeadmin`

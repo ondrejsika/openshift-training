@@ -109,9 +109,9 @@ https://docs.openshift.com/container-platform/4.15/security/certificates/replaci
 
 ```bash
 lego --email ondrejsika@ondrejsika.com --dns cloudflare \
-  --domains okd0.sikademo.com \
-  --domains '*.okd0.sikademo.com' \
-  --domains '*.apps.okd0.sikademo.com' \
+  --domains openshift.sikademo.com \
+  --domains '*.openshift.sikademo.com' \
+  --domains '*.apps.openshift.sikademo.com' \
   --domains '*.corp.sikademo.com' \
   run
 ```
@@ -119,10 +119,10 @@ lego --email ondrejsika@ondrejsika.com --dns cloudflare \
 ### Create Secret
 
 ```bash
-oc create secret tls okd0-sikademo-com-tls \
+oc create secret tls openshift-sikademo-com-tls \
   -n openshift-ingress \
-  --cert=.lego/certificates/okd0.sikademo.com.crt \
-  --key=./.lego/certificates/okd0.sikademo.com.key
+  --cert=.lego/certificates/openshift.sikademo.com.crt \
+  --key=./.lego/certificates/openshift.sikademo.com.key
 ```
 
 ### Patch Ingress Controller
@@ -130,7 +130,7 @@ oc create secret tls okd0-sikademo-com-tls \
 ```bash
 oc patch ingresscontroller.operator default \
   -n openshift-ingress-operator \
-  --type=merge -p '{"spec":{"defaultCertificate": {"name": "okd0-sikademo-com-tls"}}}'
+  --type=merge -p '{"spec":{"defaultCertificate": {"name": "openshift-sikademo-com-tls"}}}'
 ```
 
 ## OAuth configuration with Keycloak SSO using YAML

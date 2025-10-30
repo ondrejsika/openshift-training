@@ -228,7 +228,7 @@ securityContext:
 Example
 
 ```
-oc apply -f security-context.yml
+oc apply -f examples/security_context.yml
 ```
 
 ## Pod Security Admission

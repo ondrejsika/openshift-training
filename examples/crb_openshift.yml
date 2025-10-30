@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: openshift@sikademo.com
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin-openshift@sikademo.com
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: openshift@sikademo.com

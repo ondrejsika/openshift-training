@@ -167,17 +167,17 @@ oc new-project training
 ### Create Project form YAML
 
 ```
-oc apply -f project-foo.yml
+oc apply -f examples/project-foo.yml
 ```
 
 ```
-oc apply -f project-bar.yml
+oc apply -f examples/project-bar.yml
 ```
 
 Create `training-restricted` project with admission security restrictions.
 
 ```
-oc apply -f project-training-restricted.yml
+oc apply -f examples/project-training-restricted.yml
 ```
 
 ## Project CLI
